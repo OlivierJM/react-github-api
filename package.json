@@ -9,9 +9,10 @@
     "apollo-link-context": "^1.0.10",
     "apollo-link-http": "^1.5.7",
     "graphql": "^14.0.2",
-    "react": "^16.6.3",
+    "react": "^16.7.0-alpha.2",
     "react-apollo": "^2.3.2",
-    "react-dom": "^16.6.3",
+    "react-apollo-hooks": "^0.1.8",
+    "react-dom": "^16.7.0-alpha.2",
     "react-scripts": "2.1.1"
   },
   "scripts": {

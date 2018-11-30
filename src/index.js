@@ -38,7 +38,7 @@ client
   .query({
     query: gql`
       {
-        user(login: "alfeyo") {
+        user(login: "makayi") {
             repositoriesContributedTo(last: 5) {
             totalCount
             nodes {
@@ -48,6 +48,7 @@ client
             repositories(last: 10) {
             totalCount
             nodes {
+                id
                 name
                 url
                 description
@@ -65,7 +66,7 @@ client
   })
   .then(result => console.log(result));
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App client={client}/>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
