@@ -5,7 +5,7 @@ import { Query } from 'react-apollo'
 
 const GET_REPOS = gql`
   {
-    user(login: "makayi") {
+    user(login: "olivierjm") {
       repositoriesContributedTo(last: 5) {
         totalCount
         nodes {
