@@ -4,8 +4,8 @@ import gql from "graphql-tag";
 import { Query } from 'react-apollo'
 
 const GET_REPOS = gql`
-  {
-    user(login: "olivierjm") {
+  query GETREPOS($login: String!){
+    user(login: $login) {
       repositoriesContributedTo(last: 5) {
         totalCount
         nodes {
@@ -29,13 +29,17 @@ const GET_REPOS = gql`
   }
 `;
 
-export const Repos = () => (
-    <Query query={GET_REPOS} fetchPolicy="network-only">
+export const Repos = ({login}) => (
+    <Query 
+      query={GET_REPOS} 
+      fetchPolicy="network-only"
+      variables={{login}}
+      >
     {({ loading, data }) => {
       if (loading) {
         return <p className="navbar-text navbar-right">Loading...</p>;
       }
-      if (!loading) {
+      if (!loading && data) {
         return (
             <ol>
               {data.user.repositories.nodes.map((repo, i) => (
