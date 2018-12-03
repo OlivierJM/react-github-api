@@ -1,10 +1,9 @@
-import React from 'react'
+import React from "react";
 import gql from "graphql-tag";
-// import { useQuery } from "react-apollo-hooks";
-import { Query } from 'react-apollo'
+import { Query } from "react-apollo";
 
 const GET_REPOS = gql`
-  query GETREPOS($login: String!){
+  query GETREPOS($login: String!) {
     user(login: $login) {
       repositoriesContributedTo(last: 5) {
         totalCount
@@ -12,7 +11,7 @@ const GET_REPOS = gql`
           name
         }
       }
-      repositories(last: 20) {
+      repositories(last: 50) {
         totalCount
         nodes {
           name
@@ -29,25 +28,17 @@ const GET_REPOS = gql`
   }
 `;
 
-export const Repos = ({login}) => (
-    <Query 
-      query={GET_REPOS} 
-      fetchPolicy="network-only"
-      variables={{login}}
-      >
-    {({ loading, data }) => {
-      if (loading) {
-        return <p className="navbar-text navbar-right">Loading...</p>;
-      }
-      if (!loading && data) {
-        return (
-            <ol>
-              {data.user.repositories.nodes.map((repo, i) => (
-                <li key={i}>{repo.name}</li>
-              ))}
-            </ol>
-        );
-      }
-    }}
+export const Repos = ({ login }) => (
+  <Query query={GET_REPOS} variables={{ login }} fetchPolicy={"network-only"}>
+    {
+      ({ loading, data }) =>
+      (!loading && data && (
+        <ol>
+          {data.user.repositories.nodes.map((repo, i) => (
+            <li key={i}>{repo.name}</li>
+          ))}
+        </ol>
+      )) || <p>Loading...</p>
+    }
   </Query>
 );
