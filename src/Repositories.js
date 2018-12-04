@@ -25,7 +25,9 @@ class Repositories extends React.Component {
     return (
       <div>
         <input onChange={this.onChange} placeholder='type a username' type='text' />
-        <Repos login={query}/>
+        <div className='row'>
+            <Repos login={query}/> 
+        </div>
       </div>
     )
   }
