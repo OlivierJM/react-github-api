@@ -10,7 +10,6 @@ class App extends Component {
       <ApolloProvider client={this.props.client}>
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
           <Repositories />
         </header>
       </div>

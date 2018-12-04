@@ -21,6 +21,7 @@ const GET_REPOS = gql`
             nodes {
               name
             }
+            totalCount
           }
         }
       }
@@ -30,23 +31,21 @@ const GET_REPOS = gql`
 
 export const Repos = ({ login }) => (
   <Query query={GET_REPOS} variables={{ login }} fetchPolicy={"network-only"}>
-    {
-      ({ loading, data }) =>
-      (!loading && data && (
-        <ol>
-          {data.user.repositories.nodes.map((repo, i) => (
-            <div key={i} className="card" style={{width: '20em'}}>
+    {({ loading, data }) =>
+      (!loading &&
+        data &&
+        data.user.repositories.nodes.map((repo, i) => (
+          <div key={i} className="card" style={{ width: "20em" }}>
             <div className="card-body">
               <h4 className="card-title">{repo.name}</h4>
-              <h5 className="card-subtitle">Nice looking subtitle.</h5>
-              <p className="card-text">This is another example of a card without image. Cards are also meant to be used without images, but with text/links/buttons.</p>
-              <a className="card-link" href={repo.url}>First link</a>
+              <h5 className="card-subtitle">{repo.stargazers.totalCount}</h5>
+              <p className="card-text">{repo.description}</p>
+              <a className="card-link" href={repo.url}>
+                Github Link
+              </a>
             </div>
-            </div>
-
-          ))}
-        </ol>
-      )) || <p>Loading...</p>
+          </div>
+        ))) || <p>Loading...</p>
     }
   </Query>
-);
+)
