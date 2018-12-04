@@ -2,13 +2,14 @@
   "name": "github-graphql",
   "version": "0.1.0",
   "private": true,
-  "homepage" : "http://olivierjm.github.io/repo-query",
+  "homepage": "http://olivierjm.github.io/repo-query",
   "dependencies": {
     "apollo-boost": "^0.1.22",
     "apollo-cache-inmemory": "^1.3.11",
     "apollo-client": "^2.4.7",
     "apollo-link-context": "^1.0.10",
     "apollo-link-http": "^1.5.7",
+    "gh-pages": "^2.0.1",
     "graphql": "^14.0.2",
     "lodash": "^4.17.11",
     "react": "^16.7.0-alpha.2",
@@ -21,7 +22,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "now-deploy": "now --name repo-query",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
