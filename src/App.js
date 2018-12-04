@@ -9,9 +9,7 @@ class App extends Component {
     return (
       <ApolloProvider client={this.props.client}>
       <div className="App">
-        <header className="App-header">
           <Repositories />
-        </header>
       </div>
       </ApolloProvider>
     );
