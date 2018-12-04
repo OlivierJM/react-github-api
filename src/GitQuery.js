@@ -47,7 +47,7 @@ export const Repos = ({ login }) => (
             </div>
           </div>
         </div>
-        ))) || <p>Loading...</p>
+        ))) || <div className='row flex-center'><p className='flex-center'>Loading...</p></div>
     }
   </Query>
 )
