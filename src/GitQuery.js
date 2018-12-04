@@ -35,7 +35,15 @@ export const Repos = ({ login }) => (
       (!loading && data && (
         <ol>
           {data.user.repositories.nodes.map((repo, i) => (
-            <li key={i}>{repo.name}</li>
+            <div key={i} className="card" style={{width: '20em'}}>
+            <div className="card-body">
+              <h4 className="card-title">{repo.name}</h4>
+              <h5 className="card-subtitle">Nice looking subtitle.</h5>
+              <p className="card-text">This is another example of a card without image. Cards are also meant to be used without images, but with text/links/buttons.</p>
+              <a className="card-link" href={repo.url}>First link</a>
+            </div>
+            </div>
+
           ))}
         </ol>
       )) || <p>Loading...</p>
