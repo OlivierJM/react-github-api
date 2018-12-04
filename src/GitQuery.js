@@ -17,6 +17,7 @@ const GET_REPOS = gql`
           name
           url
           description
+          isFork
           stargazers(last: 5) {
             nodes {
               name
@@ -40,6 +41,7 @@ export const Repos = ({ login }) => (
             <div className="card-body">
               <h4 className="card-title">{repo.name}</h4>
               <h5 className="card-subtitle">{repo.stargazers.totalCount}</h5>
+              <h5 className="card-subtitle">{repo.isFork && 'Forked'}</h5>
               <p className="card-text">{repo.description}</p>
               <a className="card-link" href={repo.url}>
                 Github Link

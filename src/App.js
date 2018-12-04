@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { ApolloProvider } from 'react-apollo'
-import logo from './logo.svg';
 import './App.css';
 import Repositories from './Repositories'
 
