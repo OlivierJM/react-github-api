@@ -24,7 +24,11 @@ class Repositories extends React.Component {
     const { query } = this.state
     return (
       <div>
-        <input onChange={this.onChange} placeholder='type a username' type='text' />
+          <div className='row flex-center'>
+            <div className="form-group">
+                <input onChange={this.onChange} placeholder='type a username' type='text' />
+            </div>
+          </div>
         <div className='row'>
             <Repos login={query}/> 
         </div>
