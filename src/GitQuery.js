@@ -36,7 +36,7 @@ export const Repos = ({ login }) => (
       (!loading &&
         data &&
         data.user.repositories.nodes.map((repo, i) => (
-          <div className="col-4 col" key={i} >
+          <div className="col-4 sm-12 md-4 col" key={i} >
           <div className="card" style={{ width: "20em" }}>
             <div className="card-body">
               <h4 className="card-title">{repo.name}</h4>
