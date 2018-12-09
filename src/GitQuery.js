@@ -36,8 +36,8 @@ export const Repos = ({ login }) => (
       (!loading &&
         data &&
         data.user.repositories.nodes.map((repo, i) => (
-          <div className="col-4 sm-12 md-4 col" key={i} >
-          <div className="card" style={{ width: "20em" }}>
+          <div className="sm-12 md-4 col" key={i} >
+          <div className="card" >
             <div className="card-body">
               <h4 className="card-title">{repo.name}</h4>
               <h5 className="card-subtitle">{repo.stargazers.totalCount}</h5>
