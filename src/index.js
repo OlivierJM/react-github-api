@@ -34,23 +34,24 @@ client
     query: gql`
       {
         user(login: "olivierjm") {
-            repositoriesContributedTo(last: 5) {
+          repositoriesContributedTo(last: 5) {
             totalCount
             nodes {
-                name
-              }
+              name
             }
-            repositories(last: 10) {
+          }
+          repositories(first: 50, orderBy: { field: STARGAZERS, direction: DESC }) {
             totalCount
             nodes {
-                id
-                name
-                url
-                description
-                stargazers(last: 5) {
+              name
+              url
+              description
+              isFork
+              stargazers(last: 5) {
                 nodes {
-                    name
+                  name
                 }
+                totalCount
               }
             }
           }
