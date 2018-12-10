@@ -11,7 +11,7 @@ const GET_REPOS = gql`
           name
         }
       }
-      repositories(last: 50) {
+      repositories(first: 50, orderBy: { field: STARGAZERS, direction: DESC }) {
         totalCount
         nodes {
           name
