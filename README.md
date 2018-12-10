@@ -32,7 +32,7 @@ you will need a github token for this to work, generate one for yourself [here](
 
 create a file in the root of the project called `.env` and add your token as follows. 
 
-`REACT_TOKEN="YOURTOKENSHOULDBEHERE1234"` 
+`REACT_APP_TOKEN="YOURTOKENSHOULDBEHERE1234"` 
 
 
 ## Running 
