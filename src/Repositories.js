@@ -6,7 +6,7 @@ class Repositories extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      query: "" // initial query
+      query: "", // initial query
     }
     this.delayedCallback = _.debounce(this.updateQuery, 1000)
   }
@@ -28,9 +28,9 @@ class Repositories extends React.Component {
             <div className="form-group">
                 <input onChange={this.onChange} placeholder='type a username' type='text' />
             </div>
-          </div>
+            </div>
         <div className='row'>
-            <Repos login={query}/> 
+            <Repos login={query} /> 
         </div>
       </div>
     )
