@@ -29,38 +29,5 @@ const client = new ApolloClient({
   cache: new InMemoryCache()
 });
 
-client
-  .query({
-    query: gql`
-      {
-        user(login: "olivierjm") {
-          repositoriesContributedTo(last: 5) {
-            totalCount
-            nodes {
-              name
-            }
-          }
-          repositories(first: 50, orderBy: { field: STARGAZERS, direction: DESC }) {
-            totalCount
-            nodes {
-              name
-              url
-              description
-              isFork
-              stargazers(last: 5) {
-                nodes {
-                  name
-                }
-                totalCount
-              }
-            }
-          }
-        }
-      }
-
-    `
-  })
-  .then(result => console.log(result));
-
 ReactDOM.render(<App client={client}/>, document.getElementById('root'));
 serviceWorker.unregister();
