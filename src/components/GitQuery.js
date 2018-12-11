@@ -1,6 +1,7 @@
 import React from "react";
 import { Query } from "react-apollo";
 import { GET_REPOS } from '../queries/RepoQuery'
+import PlaceHolder from './PlaceHolder'
 
 
 export const Repos = ({ login }) => (
@@ -23,8 +24,9 @@ export const Repos = ({ login }) => (
         </div>
         ))
          : !login.length 
-         ? <div className='row flex-center'><p className='flex-center'>You can search for a username</p></div>
-         : <div className='row flex-center'><p className='flex-center'>Loading...</p></div>
+         ? <PlaceHolder />
+         : <div className='row flex-center'><p className='flex-center'>Loading ....</p></div>
+         
       )}
   </Query>
 )
