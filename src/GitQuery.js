@@ -40,7 +40,7 @@ export const Repos = ({ login }) => (
           <div className="card" >
             <div className="card-body">
               <h4 className="card-title">{repo.name}</h4>
-              <h5 className="card-subtitle">{repo.stargazers.totalCount}</h5>
+              <h5 className="card-subtitle"><span role='img' aria-label="stars">⭐</span> {repo.stargazers.totalCount}</h5>
               <h5 className="card-subtitle">{repo.isFork && 'Forked'}</h5>
               <p className="card-text">{repo.description}</p>
               <a className="card-link" href={repo.url}>
