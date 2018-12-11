@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Fragment } from "react"
 import { Repos } from "./GitQuery"
 import _ from "lodash"
 
@@ -23,16 +23,16 @@ class Repositories extends React.Component {
   render() {
     const { query } = this.state
     return (
-      <div>
+      <Fragment>
           <div className='row flex-center'>
-            <div className="form-group">
-                <input onChange={this.onChange} placeholder='type a username' type='text' />
-            </div>
+              <div className="form-group">
+                  <input onChange={this.onChange} placeholder='type a username' type='text' />
+              </div>
             </div>
         <div className='row'>
             <Repos login={query} /> 
         </div>
-      </div>
+      </Fragment>
     )
   }
 }
