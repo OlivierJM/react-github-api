@@ -1,31 +1,7 @@
 import React from "react";
-import gql from "graphql-tag";
 import { Query } from "react-apollo";
+import { GET_REPOS } from '../queries/RepoQuery'
 
-const GET_REPOS = gql`
-  query GETREPOS($login: String!) {
-    user(login: $login) {
-      repositoriesContributedTo(last: 5) {
-        totalCount
-        nodes {
-          name
-        }
-      }
-      repositories(first: 50, orderBy: { field: STARGAZERS, direction: DESC }) {
-        totalCount
-        nodes {
-          name
-          url
-          description
-          isFork
-          stargazers(last: 5) {
-            totalCount
-          }
-        }
-      }
-    }
-  }
-`;
 
 export const Repos = ({ login }) => (
   <Query query={GET_REPOS} variables={{ login }} fetchPolicy={"network-only"}>
