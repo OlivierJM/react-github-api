@@ -16,7 +16,10 @@ export const Repos = ({ login }) => (
               <h5 className="card-subtitle"><span role='img' aria-label="stars">⭐</span> {repo.stargazers.totalCount}</h5>
               <h5 className="card-subtitle">{repo.isFork && 'Forked'}</h5>
               <p className="card-text">{repo.description}</p>
-              <a className="card-link" href={repo.url}>
+              <a className="card-link" 
+                target='_blank' 
+                rel='noopener noreferrer'
+                href={repo.url}>
                 Github Link
               </a>
             </div>
