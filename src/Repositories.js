@@ -16,7 +16,7 @@ class Repositories extends React.Component {
   }
 
   onChange = e => {
-    e.persist()
+    e.persist() // because of the event pooling with react synthetic events, this has to be persisted
     this.delayedCallback(e)
   }
 
