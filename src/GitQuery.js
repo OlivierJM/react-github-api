@@ -19,9 +19,6 @@ const GET_REPOS = gql`
           description
           isFork
           stargazers(last: 5) {
-            nodes {
-              name
-            }
             totalCount
           }
         }
