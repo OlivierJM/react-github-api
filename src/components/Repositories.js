@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Fragment } from "react"
 import { Repos } from "./GitQuery"
 import _ from "lodash"
 
@@ -22,17 +22,25 @@ class Repositories extends React.Component {
 
   render() {
     const { query } = this.state
+    // github username shouldn't be longer than 39 characters
     return (
-      <div>
+      <Fragment>
           <div className='row flex-center'>
-            <div className="form-group">
-                <input onChange={this.onChange} placeholder='type a username' type='text' />
+              <div className="form-group">
+                  <input 
+                    maxLength={39} 
+                    onChange={this.onChange} 
+                    placeholder='type a github username' 
+                    type='text' 
+                    style={{width: 200}}
+                    autoFocus 
+                  />
+              </div>
             </div>
-            </div>
-        <div className='row'>
-            <Repos login={query} /> 
-        </div>
-      </div>
+          <div className='row'>
+              <Repos login={query} /> 
+          </div>
+      </Fragment>
     )
   }
 }

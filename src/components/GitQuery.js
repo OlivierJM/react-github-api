@@ -1,6 +1,7 @@
 import React from "react";
 import { Query } from "react-apollo";
 import { GET_REPOS } from '../queries/RepoQuery'
+import PlaceHolder from './PlaceHolder'
 
 
 export const Repos = ({ login }) => (
@@ -15,7 +16,10 @@ export const Repos = ({ login }) => (
               <h5 className="card-subtitle"><span role='img' aria-label="stars">⭐</span> {repo.stargazers.totalCount}</h5>
               <h5 className="card-subtitle">{repo.isFork && 'Forked'}</h5>
               <p className="card-text">{repo.description}</p>
-              <a className="card-link" href={repo.url}>
+              <a className="card-link" 
+                target='_blank' 
+                rel='noopener noreferrer'
+                href={repo.url}>
                 Github Link
               </a>
             </div>
@@ -23,8 +27,9 @@ export const Repos = ({ login }) => (
         </div>
         ))
          : !login.length 
-         ? <div className='row flex-center'><p className='flex-center'>You can search for a username</p></div>
-         : <div className='row flex-center'><p className='flex-center'>Loading...</p></div>
+         ? <PlaceHolder />
+         : <div className='row flex-center'><p className='flex-center'>Loading ....</p></div>
+         
       )}
   </Query>
 )
