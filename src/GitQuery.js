@@ -29,9 +29,8 @@ const GET_REPOS = gql`
 
 export const Repos = ({ login }) => (
   <Query query={GET_REPOS} variables={{ login }} fetchPolicy={"network-only"}>
-    {({ loading, data }) =>
-      (!loading &&
-        data &&
+    {({ loading, data, error }) =>
+      ((!loading && data) ? 
         data.user.repositories.nodes.map((repo, i) => (
           <div className="sm-12 md-4 col" key={i} >
           <div className="card" >
@@ -46,7 +45,10 @@ export const Repos = ({ login }) => (
             </div>
           </div>
         </div>
-        ))) || <div className='row flex-center'><p className='flex-center'>Loading...</p></div>
-    }
+        ))
+         : !login.length 
+         ? <div className='row flex-center'><p className='flex-center'>You can search for a username</p></div>
+         : <div className='row flex-center'><p className='flex-center'>Loading...</p></div>
+      )}
   </Query>
 )
