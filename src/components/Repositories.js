@@ -26,7 +26,7 @@ class Repositories extends React.Component {
       <Fragment>
           <div className='row flex-center'>
               <div className="form-group">
-                  <input onChange={this.onChange} placeholder='type a username' type='text' />
+                  <input maxLength={39} onChange={this.onChange} placeholder='type a username' type='text' />
               </div>
             </div>
         <div className='row'>
