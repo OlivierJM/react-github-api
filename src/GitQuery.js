@@ -29,7 +29,7 @@ const GET_REPOS = gql`
 
 export const Repos = ({ login }) => (
   <Query query={GET_REPOS} variables={{ login }} fetchPolicy={"network-only"}>
-    {({ loading, data, error }) =>
+    {({ loading, data }) =>
       ((!loading && data) ? 
         data.user.repositories.nodes.map((repo, i) => (
           <div className="sm-12 md-4 col" key={i} >
