@@ -2,34 +2,26 @@ import React, { Fragment } from "react"
 
 function PlaceHolder() {
   return (
-    <Fragment>
+    <div className='container'>
       <div className="row flex-center">
         <div className="text-center">
           <h1>Repo Query</h1>
-          <h3>The Easiest to Query user's repositories</h3>
+          <h3>The Easiest way to query a github user's repositories</h3>
+          <h5>Type the github username in the box above to see the repos</h5>
         </div>
+        </div>
+        <div className='row flex-center'>
+            <a className="paper-btn margin" href="https://github.com/OlivierJM/react-github-api">
+            Fork it here
+            </a>
+            <a className="paper-btn margin" href="https://github.com/OlivierJM/react-github-api/issues">
+            Issues
+            </a>
+            <a className="paper-btn margin" href="https://github.com/OlivierJM">
+            More from me
+            </a>
       </div>
-
-      <div className="row flex-center child-borders">
-        <a className="paper-btn margin" href="https://github.com/OlivierJM/react-github-api">
-          Fork it here
-        </a>
-        <a className="paper-btn margin" href="/docs/">
-          Documentation
-        </a>
-        <a className="paper-btn margin" href="/about/">
-          About
-        </a>
-
-        <a
-          href="https://github.com/rhyneav/papercss"
-          target="_blank"
-          className="paper-btn margin"
-        >
-          Github
-        </a>
-      </div>
-    </Fragment>
+    </div>
   )
 }
 export default PlaceHolder
