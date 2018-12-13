@@ -1,23 +1,20 @@
-import React, { Component, Suspense } from 'react';
-import { ApolloProvider } from 'react-apollo'
-import './App.css';
-import FallBackUI from './components/FallbackUI'
+import React, { Suspense } from "react"
+import { ApolloProvider } from "react-apollo"
+import FallBackUI from "./components/FallbackUI"
+import "./App.css"
 
-const Repos = React.lazy(() => import('./components/Repositories'))
-// import Repositories from './components/Repositories'
+const Repos = React.lazy(() => import("./components/Repositories"))
 
-class App extends Component {
-  render() {
-    return (
-      <Suspense fallback={<FallBackUI />}>
-        <ApolloProvider client={this.props.client}>
-          <div className="App">
-              <Repos />
-          </div>
-        </ApolloProvider>
-      </Suspense>
-    );
-  }
+function App({client}) {
+  return (
+    <Suspense fallback={<FallBackUI />}>
+      <ApolloProvider client={client}>
+        <div className="App">
+          <Repos />
+        </div>
+      </ApolloProvider>
+    </Suspense>
+  )
 }
 
-export default App;
+export default App
