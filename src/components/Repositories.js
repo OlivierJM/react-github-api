@@ -1,5 +1,6 @@
-import React, { Fragment, useEffect, useState } from "react"
+import React, { Fragment, useState } from "react"
 import { Repos } from "./GitQuery"
+import { useDebounce } from '../utils/hooks'
 
 function Repositories() {
   const [query, setQuery] = useState("")
@@ -27,20 +28,5 @@ function Repositories() {
       </div>
     </Fragment>
   )
-}
-
-const useDebounce = (value, delay) => {
-  const [debounced, setDebounced] = useState(value)
-  useEffect(
-    () => {
-      const handler = setTimeout(() => {
-        setDebounced(value);
-      }, delay);
-      return () => clearTimeout(handler);
-    },
-    [value, delay]
-    )
-    return debounced
-  }
-  
-  export default Repositories
+}  
+export default Repositories
