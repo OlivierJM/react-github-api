@@ -1,4 +1,4 @@
-import React, { Fragment } from "react"
+import React, { Fragment, useEffect, useState } from "react"
 import { Repos } from "./GitQuery"
 import _ from "lodash"
 
@@ -8,11 +8,12 @@ class Repositories extends React.Component {
     this.state = {
       query: "", // initial query
     }
-    this.delayedCallback = _.debounce(this.updateQuery, 1000)
+    // this.delayedCallback = _.debounce(this.updateQuery, 1000)
   }
 
   updateQuery = ({target: { value }}) => {
-    this.setState({ query: value })
+    debounce(this.setState({ query: value }), 2000)
+    // this.setState({ query: value })
   }
 
   onChange = e => {
@@ -29,7 +30,7 @@ class Repositories extends React.Component {
               <div className="form-group">
                   <input 
                     maxLength={39} 
-                    onChange={this.onChange} 
+                    onChange={this.updateQuery} 
                     placeholder='type a github username' 
                     type='text' 
                     style={{width: 200}}
@@ -46,3 +47,26 @@ class Repositories extends React.Component {
 }
 
 export default Repositories
+
+
+const debounce = (func, delay) => {
+  let inDebounce
+  return function(){
+    const context = this
+    clearTimeout(inDebounce)
+    inDebounce = setTimeout(() => func.apply(context, arguments), delay)
+  }
+}
+
+
+// 
+const useDebounce = (value, delay) => {
+  const [debounced, setDebounced] = useState(value)
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebounced(value)
+    }, delay)
+    return () => clearTimeout(handler)
+  }, [value, delay])
+  return debounced
+}
