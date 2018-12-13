@@ -11,10 +11,8 @@
     "apollo-link-http": "^1.5.7",
     "gh-pages": "^2.0.1",
     "graphql": "^14.0.2",
-    "lodash": "^4.17.11",
     "react": "^16.7.0-alpha.2",
     "react-apollo": "^2.3.2",
-    "react-apollo-hooks": "^0.1.8",
     "react-dom": "^16.7.0-alpha.2",
     "react-scripts": "2.1.1"
   },
@@ -37,5 +35,3 @@
     "not op_mini all"
   ]
 }
-
-
