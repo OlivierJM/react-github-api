@@ -24,7 +24,14 @@
     "now-deploy": "now --name repo-query",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "precommit": "pretty-quick --staged"
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "pretty-quick --staged",
+      "eslint src/ --fix",
+      "git add"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"
