@@ -5,7 +5,7 @@ import "./App.css"
 
 const Repos = React.lazy(() => import("./components/Repositories"))
 
-function App({client}) {
+function App({ client }) {
   return (
     <Suspense fallback={<FallBackUI />}>
       <ApolloProvider client={client}>

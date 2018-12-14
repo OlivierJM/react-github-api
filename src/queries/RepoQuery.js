@@ -1,4 +1,4 @@
-import gql from "graphql-tag";
+import gql from "graphql-tag"
 
 const GET_REPOS = gql`
   query GETREPOS($login: String!) {
@@ -23,6 +23,6 @@ const GET_REPOS = gql`
       }
     }
   }
-`;
+`
 
 export { GET_REPOS }
