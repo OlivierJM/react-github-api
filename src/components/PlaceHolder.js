@@ -26,12 +26,10 @@ function PlaceHolder() {
         <a className="paper-btn margin" href="https://github.com/OlivierJM">
           More from me
         </a>
-         {/* <img width='' src='https://travis-ci.com/OlivierJM/react-github-api.svg?branch=master' alt='travis build status'/> */}
+        {/* <img width='' src='https://travis-ci.com/OlivierJM/react-github-api.svg?branch=master' alt='travis build status'/> */}
       </div>
       <h4>Contributors</h4>
-        <p>
-            The list of contributors is coming soon ...
-        </p>
+      <p>The list of contributors is coming soon ...</p>
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from "react"
 import { Repos } from "./GitQuery"
-import { useDebounce } from '../utils/hooks'
+import { useDebounce } from "../utils/hooks"
 
 function Repositories() {
   const [query, setQuery] = useState("")
@@ -28,5 +28,5 @@ function Repositories() {
       </div>
     </Fragment>
   )
-}  
+}
 export default Repositories
