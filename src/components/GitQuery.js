@@ -10,7 +10,12 @@ export const Repos = ({ login }) => (
       !loading && data ? (
         <Fragment>
           <div className="row">
-            <Profile image={data.user.avatarUrl} name={data.user.name} />
+            <Profile
+              image={data.user.avatarUrl}
+              name={data.user.name}
+              orgs={data.user.organizations.totalCount}
+              location={data.user.location}
+            />
           </div>
           <div className="row">
             {data.user.repositories.nodes.map((repo, i) => (

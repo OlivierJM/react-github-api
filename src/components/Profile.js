@@ -1,16 +1,15 @@
 // this file will be a holder for user's profile info as indicated in the issues
-import React, { Fragment } from "react"
-
-// location
-// name
-// organizations
-// location
+import React from "react"
 
 const Profile = props => (
-  <Fragment>
+  <div>
     <h2>{props.name}</h2>
-    <img src={props.image} alt="github avatar" />
-  </Fragment>
+    <p>
+      Organizations: {props.orgs} <br />
+      City: {props.location}
+    </p>
+    {/* <img src={props.image} alt="github avatar" /> */}
+  </div>
 )
 
 export default Profile
