@@ -6,7 +6,8 @@ const Profile = props => (
     <h2>{props.name}</h2>
     <p>
       Organizations: {props.orgs} <br />
-      City: {props.location}
+      Location: {props.location} <br />
+      Number of Repos: {props.totalCount}
     </p>
     {/* <img src={props.image} alt="github avatar" /> */}
   </div>

@@ -11,7 +11,7 @@ export const Repos = ({ login }) => (
         <Fragment>
           <div className="row">
             <Profile
-              image={data.user.avatarUrl}
+              totalCount={data.user.repositories.totalCount}
               name={data.user.name}
               orgs={data.user.organizations.totalCount}
               location={data.user.location}
