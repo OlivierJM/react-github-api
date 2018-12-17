@@ -3,13 +3,16 @@ import gql from "graphql-tag"
 const GET_REPOS = gql`
   query GETREPOS($login: String!) {
     user(login: $login) {
-      repositoriesContributedTo(last: 5) {
+      name
+      organizations {
         totalCount
-        nodes {
-          name
-        }
       }
-      repositories(first: 50, orderBy: { field: STARGAZERS, direction: DESC }) {
+      avatarUrl
+      location
+      repositories(
+        first: 100
+        orderBy: { field: STARGAZERS, direction: DESC }
+      ) {
         totalCount
         nodes {
           name
