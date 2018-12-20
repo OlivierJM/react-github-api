@@ -45,20 +45,23 @@ create a file in the root of the project called `.env` and add your token as fol
 
 # Contribution
 
-1. Fork this repo
-2. Clone your forked repo
-3. Add this repo to your remotes as upstream e.g `git remote add upstream https://github.com/OlivierJM/react-github-api`
-4. Before pushing anything to your fork, always `git pull upstream`
-5. Your commit messages should be clear not vague e.g "Changes and Updates made"
-6. Work from a branch other than master whenever possible.
-7. Write clean and transparent code which is easy to maintain
-8. When making PRs, give clear descriptions of the changes you made.
-9. Happy Coding
+Fork this repo
 
+Clone your forked repo
 
+`git clone https://github.com/your-github-username/react-github-api.git`
 
+Add this repo to your remotes as upstream.  
 
-# To-do
+`git remote add upstream https://github.com/OlivierJM/react-github-api`  
 
-Check the issues for the coming features and see where you can help.  
+Before pushing anything to your fork, always 
 
+`git pull upstream` 
+
+> Make sure your commit messages should be clear not vague e.g "Changes and Updates made"  
+Work from a branch other than master whenever possible and branch name should be clear  
+Write clean and transparent code which is easy to maintain  
+When making PRs, give clear descriptions of the changes you made.  
+
+## Happy Coding
