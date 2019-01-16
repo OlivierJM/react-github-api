@@ -7,6 +7,19 @@ const GET_REPOS = gql`
       organizations {
         totalCount
       }
+      # this will be used on the new page for user info
+      contributionsCollection {
+        totalCommitContributions
+        totalIssueContributions
+        totalPullRequestContributions
+        totalRepositoriesWithContributedIssues
+        totalRepositoriesWithContributedPullRequestReviews
+        totalRepositoryContributions
+        contributionCalendar {
+          totalContributions
+        }
+      }
+      # user image
       avatarUrl
       location
       repositories(

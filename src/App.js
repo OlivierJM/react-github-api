@@ -1,19 +1,21 @@
 import React, { Suspense } from "react"
 import { ApolloProvider } from "react-apollo"
+import { ApolloProvider as ApolloProviderHooked } from "react-apollo-hooks"
 import FallBackUI from "./components/FallbackUI"
-import "./App.css"
 
 const Repos = React.lazy(() => import("./components/Repositories"))
 
 function App({ client }) {
   return (
-    <Suspense fallback={<FallBackUI />}>
-      <ApolloProvider client={client}>
-        <div className="App">
-          <Repos />
-        </div>
-      </ApolloProvider>
-    </Suspense>
+    <ApolloProvider client={client}>
+      <ApolloProviderHooked client={client}>
+        <Suspense fallback={<FallBackUI />}>
+          <div className="App">
+            <Repos />
+          </div>
+        </Suspense>
+      </ApolloProviderHooked>
+    </ApolloProvider>
   )
 }
 

@@ -3,9 +3,12 @@ import React from "react"
 // this can be made better
 function FallBackUI() {
   return (
-    <div className="row flex-center">
-      <p className="flex-center">Loading...</p>
-    </div>
+    <p
+      style={{ marginTop: "20%", textAlign: "center", fontSize: "3.5em" }}
+      className="flex-center"
+    >
+      Loading...
+    </p>
   )
 }
 export default FallBackUI

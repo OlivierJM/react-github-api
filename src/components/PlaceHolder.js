@@ -28,8 +28,8 @@ function PlaceHolder() {
         </a>
         {/* <img width='' src='https://travis-ci.com/OlivierJM/react-github-api.svg?branch=master' alt='travis build status'/> */}
       </div>
-      <h4>Contributors</h4>
-      <p>The list of contributors is coming soon ...</p>
+      <h4 className="text-center">Contributors</h4>
+      <p className="text-center">The list of contributors is coming soon ...</p>
     </div>
   )
 }
