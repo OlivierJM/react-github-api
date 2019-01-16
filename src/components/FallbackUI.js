@@ -4,7 +4,7 @@ import React from "react"
 function FallBackUI() {
   return (
     <p
-      style={{ marginTop: "20%", textAlign: "center", fontSize: "3em" }}
+      style={{ marginTop: "20%", textAlign: "center", fontSize: "3.5em" }}
       className="flex-center"
     >
       Loading...

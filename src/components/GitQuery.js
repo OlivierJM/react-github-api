@@ -7,6 +7,7 @@ import Profile from "./Profile"
 export const Repos = ({ login }) => {
   const { data, error } = useQuery(GET_REPOS, { variables: { login } })
   if (error) return <PlaceHolder />
+  console.log(data)
   return (
     <Fragment>
       <div className="row">
@@ -14,7 +15,10 @@ export const Repos = ({ login }) => {
           totalCount={data.user.repositories.totalCount}
           name={data.user.name}
           orgs={data.user.organizations.totalCount}
-          location={data.user.location}
+          location={
+            data.user.contributionsCollection.contributionCalendar
+              .totalContributions
+          }
         />
       </div>
       <div className="row">
