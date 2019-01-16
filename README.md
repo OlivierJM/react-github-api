@@ -1,6 +1,7 @@
 ### react-github-api
 
 [![Build Status](https://travis-ci.com/OlivierJM/react-github-api.svg?branch=new-branch)](https://travis-ci.com/OlivierJM/react-github-api)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 `react-github-api` uses GraphQL with github API to search for a user and show their repositories instantly.  
 I used debounce to avoid making too much calls to the GraphQL server each on each onChange on the input field. 
