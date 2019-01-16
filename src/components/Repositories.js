@@ -11,7 +11,7 @@ function Repositories() {
   }
   return (
     <Fragment>
-      <div className="row flex-center">
+      <div className="row flex-center" style={{ marginTop: "10%" }}>
         <div className="form-group">
           <input
             maxLength={39}
