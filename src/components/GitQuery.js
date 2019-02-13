@@ -4,7 +4,7 @@ import { GET_REPOS } from "../queries/RepoQuery"
 import PlaceHolder from "./PlaceHolder"
 import Profile from "./Profile"
 
-export const Repos = ({ login }) => {
+export function Repos({ login }) {
   const { data, error } = useQuery(GET_REPOS, { variables: { login } })
   if (error) return <PlaceHolder />
   console.log(data)
