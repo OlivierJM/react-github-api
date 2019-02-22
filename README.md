@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.com/OlivierJM/react-github-api.svg?branch=new-branch)](https://travis-ci.com/OlivierJM/react-github-api)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a4c8f319-6846-4e57-9b7c-2c696d3b087e/deploy-status)](https://app.netlify.com/sites/repo-query/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d709c4fe-b5c5-45d4-8409-ec50dfc257b7/deploy-status)](https://app.netlify.com/sites/repo-query/deploys)
 
 `react-github-api` uses GraphQL with github API to search for a user and show their repositories instantly.  
 I used debounce to avoid making too much calls to the GraphQL server each on each onChange on the input field.
