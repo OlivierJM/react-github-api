@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from "react"
-import { Repos } from "./GitQuery"
+import { Repos } from "./GitQuery.tsx"
 import { useDebounce } from "../utils/hooks"
 
 function Repositories() {
