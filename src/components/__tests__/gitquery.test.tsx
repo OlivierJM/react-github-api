@@ -1,9 +1,7 @@
 import React from "react"
 import { shallow, mount } from "enzyme"
 import { MockedProvider } from "react-apollo/test-utils"
-import { ApolloProvider } from "react-apollo"
 import { Repos } from "../GitQuery"
-import client from "../../index"
 import { GET_REPOS } from "../../queries/RepoQuery"
 
 const mocks = [
@@ -23,21 +21,19 @@ const mocks = [
 ]
 
 describe("The Query component ", () => {
-  const wrapper = mount(
-    <ApolloProvider client={client}>
-      <MockedProvider mocks={mocks} addTypename={false}>
-        <Repos login="olivier" />
-      </MockedProvider>
-    </ApolloProvider>
+  const mountedWrapper = mount(
+    <MockedProvider mocks={mocks} addTypename={false}>
+      <Repos login="olivier" />
+    </MockedProvider>
   )
   it("should render and have the proper value", () => {
-    expect(wrapper.find({ login: "olivier" }))
+    expect(mountedWrapper.find({ login: "olivier" })).toBe(true)
   })
   it("should match the snapshot", () => {
-    expect(wrapper).toMatchSnapshot()
+    expect(mountedWrapper).toMatchSnapshot()
   })
   it("should have a card class", () => {
-    expect(wrapper.exists(".row")).toEqual(true)
-    expect(wrapper.find(".card").exists()).toEqual(true)
+    expect(mountedWrapper.exists(".row")).toEqual(true)
+    expect(mountedWrapper.find(".card").exists()).toEqual(true)
   })
 })
