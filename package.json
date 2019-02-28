@@ -16,10 +16,10 @@
     "apollo-link-http": "^1.5.7",
     "gh-pages": "^2.0.1",
     "graphql": "^14.1.1",
-    "react": "^16.8.1",
+    "react": "^16.8.3",
     "react-apollo": "^2.3.2",
     "react-apollo-hooks": "^0.4.2",
-    "react-dom": "^16.8.1",
+    "react-dom": "^16.8.3",
     "react-scripts": "2.1.1",
     "typescript": "^3.3.3333"
   },
@@ -50,6 +50,7 @@
     "jest-enzyme": "^7.0.1",
     "prettier": "1.15.3",
     "pretty-quick": "^1.8.0",
-    "react-test-renderer": "^16.8.1"
+    "react-test-renderer": "^16.8.1",
+    "webpack-dev-server": "^3.2.1"
   }
 }
