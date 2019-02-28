@@ -1,11 +1,22 @@
 import * as React from "react"
 import { useQuery } from "react-apollo-hooks"
 import { GET_REPOS } from "../queries/RepoQuery"
-import PlaceHolder from "./PlaceHolder.tsx"
-import Profile from "./Profile.tsx"
+import PlaceHolder from "./PlaceHolder"
+import Profile from "./Profile"
 
 interface repoProps {
   login: string
+}
+
+interface repo {
+  name: string
+  stargazers: stargazers
+  isFork: boolean
+  description: string
+  url: string
+}
+interface stargazers {
+  totalCount: number
 }
 
 const Repos: React.SFC<repoProps> = ({ login }) => {
@@ -27,7 +38,7 @@ const Repos: React.SFC<repoProps> = ({ login }) => {
         />
       </div>
       <div className="row">
-        {data.user.repositories.nodes.map((repo, i) => (
+        {data.user.repositories.nodes.map((repo: repo, i: number) => (
           <div className="sm-12 md-4 col" key={i}>
             <div className="card">
               <div className="card-body">
