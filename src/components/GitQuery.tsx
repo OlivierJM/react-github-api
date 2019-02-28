@@ -1,15 +1,38 @@
-import React, { Fragment } from "react"
+import * as React from "react"
 import { useQuery } from "react-apollo-hooks"
 import { GET_REPOS } from "../queries/RepoQuery"
 import PlaceHolder from "./PlaceHolder"
 import Profile from "./Profile"
 
-export function Repos({ login }) {
-  const { data, error } = useQuery(GET_REPOS, { variables: { login } })
-  if (error) return <PlaceHolder />
-  console.log(data)
+interface repoProps {
+  login: string
+}
+
+interface repo {
+  name: string
+  stargazers: stargazers
+  isFork: boolean
+  description: string
+  url: string
+}
+interface stargazers {
+  totalCount: number
+}
+
+const Repos: React.SFC<repoProps> = ({ login }) => {
+  const { data, error, loading } = useQuery(GET_REPOS, {
+    variables: { login },
+    suspend: true,
+  })
+  // fix the returned component to be different
+  if (loading) {
+    return <PlaceHolder />
+  }
+  if (error) {
+    return <PlaceHolder />
+  }
   return (
-    <Fragment>
+    <React.Fragment>
       <div className="row">
         <Profile
           totalCount={data.user.repositories.totalCount}
@@ -22,7 +45,7 @@ export function Repos({ login }) {
         />
       </div>
       <div className="row">
-        {data.user.repositories.nodes.map((repo, i) => (
+        {data.user.repositories.nodes.map((repo: repo, i: number) => (
           <div className="sm-12 md-4 col" key={i}>
             <div className="card">
               <div className="card-body">
@@ -48,6 +71,8 @@ export function Repos({ login }) {
           </div>
         ))}
       </div>
-    </Fragment>
+    </React.Fragment>
   )
 }
+
+export { Repos }

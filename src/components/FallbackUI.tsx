@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 
 // this can be made better
 function FallBackUI() {

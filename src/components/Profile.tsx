@@ -1,7 +1,14 @@
 // this file will be a holder for user's profile info as indicated in the issues
-import React from "react"
+import * as React from "react"
 
-const Profile = props => (
+interface profileProps {
+  name: string
+  orgs: number
+  location: string
+  totalCount: number
+}
+
+const Profile: React.SFC<profileProps> = props => (
   <div>
     <h2>{props.name}</h2>
     <p>

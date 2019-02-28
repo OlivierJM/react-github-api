@@ -6,8 +6,8 @@ function Repositories() {
   const [query, setQuery] = useState("")
   const debouncedQuery = useDebounce(query, 1000)
 
-  function handleQueryChange({ target: { value } }) {
-    setQuery(value)
+  function handleQueryChange(e: React.ChangeEvent<HTMLInputElement>) {
+    setQuery(e.target.value)
   }
   return (
     <Fragment>
