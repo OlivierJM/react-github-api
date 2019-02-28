@@ -1,0 +1,514 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PlaceHolder Component should should match the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <PlaceHolder />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="row flex-center"
+        >
+          <div
+            className="text-center"
+          >
+            <h1>
+              Repo Query
+            </h1>
+            <h3>
+              The Easiest way to query a github user's repositories
+            </h3>
+            <h5>
+              Type the github username in the box above to see the repos
+            </h5>
+          </div>
+        </div>,
+        <div
+          className="row flex-center"
+        >
+          <a
+            className="paper-btn margin"
+            href="https://github.com/OlivierJM/react-github-api"
+          >
+            Fork it here
+          </a>
+          <a
+            className="paper-btn margin"
+            href="https://github.com/OlivierJM/react-github-api/issues"
+          >
+            Issues
+          </a>
+          <a
+            className="paper-btn margin"
+            href="https://github.com/OlivierJM"
+          >
+            More from me
+          </a>
+        </div>,
+        <h4
+          className="text-center"
+        >
+          Contributors
+        </h4>,
+        <p
+          className="text-center"
+        >
+          The list of contributors is coming soon ...
+        </p>,
+      ],
+      "className": "container",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <div
+            className="text-center"
+          >
+            <h1>
+              Repo Query
+            </h1>
+            <h3>
+              The Easiest way to query a github user's repositories
+            </h3>
+            <h5>
+              Type the github username in the box above to see the repos
+            </h5>
+          </div>,
+          "className": "row flex-center",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h1>
+                Repo Query
+              </h1>,
+              <h3>
+                The Easiest way to query a github user's repositories
+              </h3>,
+              <h5>
+                Type the github username in the box above to see the repos
+              </h5>,
+            ],
+            "className": "text-center",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Repo Query",
+              },
+              "ref": null,
+              "rendered": "Repo Query",
+              "type": "h1",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "The Easiest way to query a github user's repositories",
+              },
+              "ref": null,
+              "rendered": "The Easiest way to query a github user's repositories",
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Type the github username in the box above to see the repos",
+              },
+              "ref": null,
+              "rendered": "Type the github username in the box above to see the repos",
+              "type": "h5",
+            },
+          ],
+          "type": "div",
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <a
+              className="paper-btn margin"
+              href="https://github.com/OlivierJM/react-github-api"
+            >
+              Fork it here
+            </a>,
+            <a
+              className="paper-btn margin"
+              href="https://github.com/OlivierJM/react-github-api/issues"
+            >
+              Issues
+            </a>,
+            <a
+              className="paper-btn margin"
+              href="https://github.com/OlivierJM"
+            >
+              More from me
+            </a>,
+          ],
+          "className": "row flex-center",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Fork it here",
+              "className": "paper-btn margin",
+              "href": "https://github.com/OlivierJM/react-github-api",
+            },
+            "ref": null,
+            "rendered": "Fork it here",
+            "type": "a",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Issues",
+              "className": "paper-btn margin",
+              "href": "https://github.com/OlivierJM/react-github-api/issues",
+            },
+            "ref": null,
+            "rendered": "Issues",
+            "type": "a",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "More from me",
+              "className": "paper-btn margin",
+              "href": "https://github.com/OlivierJM",
+            },
+            "ref": null,
+            "rendered": "More from me",
+            "type": "a",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Contributors",
+          "className": "text-center",
+        },
+        "ref": null,
+        "rendered": "Contributors",
+        "type": "h4",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "The list of contributors is coming soon ...",
+          "className": "text-center",
+        },
+        "ref": null,
+        "rendered": "The list of contributors is coming soon ...",
+        "type": "p",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="row flex-center"
+          >
+            <div
+              className="text-center"
+            >
+              <h1>
+                Repo Query
+              </h1>
+              <h3>
+                The Easiest way to query a github user's repositories
+              </h3>
+              <h5>
+                Type the github username in the box above to see the repos
+              </h5>
+            </div>
+          </div>,
+          <div
+            className="row flex-center"
+          >
+            <a
+              className="paper-btn margin"
+              href="https://github.com/OlivierJM/react-github-api"
+            >
+              Fork it here
+            </a>
+            <a
+              className="paper-btn margin"
+              href="https://github.com/OlivierJM/react-github-api/issues"
+            >
+              Issues
+            </a>
+            <a
+              className="paper-btn margin"
+              href="https://github.com/OlivierJM"
+            >
+              More from me
+            </a>
+          </div>,
+          <h4
+            className="text-center"
+          >
+            Contributors
+          </h4>,
+          <p
+            className="text-center"
+          >
+            The list of contributors is coming soon ...
+          </p>,
+        ],
+        "className": "container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <div
+              className="text-center"
+            >
+              <h1>
+                Repo Query
+              </h1>
+              <h3>
+                The Easiest way to query a github user's repositories
+              </h3>
+              <h5>
+                Type the github username in the box above to see the repos
+              </h5>
+            </div>,
+            "className": "row flex-center",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h1>
+                  Repo Query
+                </h1>,
+                <h3>
+                  The Easiest way to query a github user's repositories
+                </h3>,
+                <h5>
+                  Type the github username in the box above to see the repos
+                </h5>,
+              ],
+              "className": "text-center",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Repo Query",
+                },
+                "ref": null,
+                "rendered": "Repo Query",
+                "type": "h1",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "The Easiest way to query a github user's repositories",
+                },
+                "ref": null,
+                "rendered": "The Easiest way to query a github user's repositories",
+                "type": "h3",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Type the github username in the box above to see the repos",
+                },
+                "ref": null,
+                "rendered": "Type the github username in the box above to see the repos",
+                "type": "h5",
+              },
+            ],
+            "type": "div",
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <a
+                className="paper-btn margin"
+                href="https://github.com/OlivierJM/react-github-api"
+              >
+                Fork it here
+              </a>,
+              <a
+                className="paper-btn margin"
+                href="https://github.com/OlivierJM/react-github-api/issues"
+              >
+                Issues
+              </a>,
+              <a
+                className="paper-btn margin"
+                href="https://github.com/OlivierJM"
+              >
+                More from me
+              </a>,
+            ],
+            "className": "row flex-center",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Fork it here",
+                "className": "paper-btn margin",
+                "href": "https://github.com/OlivierJM/react-github-api",
+              },
+              "ref": null,
+              "rendered": "Fork it here",
+              "type": "a",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Issues",
+                "className": "paper-btn margin",
+                "href": "https://github.com/OlivierJM/react-github-api/issues",
+              },
+              "ref": null,
+              "rendered": "Issues",
+              "type": "a",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "More from me",
+                "className": "paper-btn margin",
+                "href": "https://github.com/OlivierJM",
+              },
+              "ref": null,
+              "rendered": "More from me",
+              "type": "a",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Contributors",
+            "className": "text-center",
+          },
+          "ref": null,
+          "rendered": "Contributors",
+          "type": "h4",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "The list of contributors is coming soon ...",
+            "className": "text-center",
+          },
+          "ref": null,
+          "rendered": "The list of contributors is coming soon ...",
+          "type": "p",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

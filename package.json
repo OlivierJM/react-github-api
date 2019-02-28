@@ -22,6 +22,7 @@
     "react-apollo-hooks": "^0.4.2",
     "react-dom": "^16.8.3",
     "react-scripts": "2.1.1",
+    "ts-jest": "^24.0.0",
     "typescript": "^3.3.3333"
   },
   "scripts": {
