@@ -28,6 +28,7 @@ const Repos: React.SFC<repoProps> = ({ login }) => {
   if (loading) {
     return <PlaceHolder />
   }
+  // The query will originally contain errors because of the initial empty string we are passing 🙈
   if (error) {
     return <PlaceHolder />
   }
