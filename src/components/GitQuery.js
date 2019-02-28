@@ -2,7 +2,7 @@ import React, { Fragment } from "react"
 import { useQuery } from "react-apollo-hooks"
 import { GET_REPOS } from "../queries/RepoQuery"
 import PlaceHolder from "./PlaceHolder.tsx"
-import Profile from "./Profile"
+import Profile from "./Profile.tsx"
 
 export function Repos({ login }) {
   const { data, error } = useQuery(GET_REPOS, {
