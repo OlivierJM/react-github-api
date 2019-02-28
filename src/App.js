@@ -3,7 +3,7 @@ import { ApolloProvider } from "react-apollo"
 import { ApolloProvider as ApolloProviderHooked } from "react-apollo-hooks"
 import FallBackUI from "./components/FallbackUI.tsx"
 
-const Repos = React.lazy(() => import("./components/Repositories"))
+const Repos = React.lazy(() => import("./components/Repositories.tsx"))
 
 function App({ client }) {
   return (
