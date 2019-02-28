@@ -20,10 +20,17 @@ interface stargazers {
 }
 
 const Repos: React.SFC<repoProps> = ({ login }) => {
-  const { data, error } = useQuery(GET_REPOS, {
+  const { data, error, loading } = useQuery(GET_REPOS, {
     variables: { login },
+    suspend: true,
   })
-  if (error) return <PlaceHolder />
+  // fix the returned component to be different
+  if (loading) {
+    return <PlaceHolder />
+  }
+  if (error) {
+    return <PlaceHolder />
+  }
   return (
     <React.Fragment>
       <div className="row">
