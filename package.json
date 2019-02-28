@@ -17,7 +17,7 @@
     "graphql": "^14.0.2",
     "react": "^16.8.1",
     "react-apollo": "^2.3.2",
-    "react-apollo-hooks": "^0.2.1",
+    "react-apollo-hooks": "^0.4.2",
     "react-dom": "^16.8.1",
     "react-scripts": "2.1.1",
     "typescript": "^3.3.3333"
