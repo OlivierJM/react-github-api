@@ -1,12 +1,11 @@
 import React, { Fragment, useState } from "react"
 import { Repos } from "./GitQuery"
-import { useDebounce } from "../utils/hooks"
+import { useDebounce } from "../utils/hooks.tsx"
 
 function Repositories() {
   const [query, setQuery] = useState("")
   const debouncedQuery = useDebounce(query, 1000)
-  // React.FormEventHandler<HTMLFormElement>
-  // { target: { value } }
+
   function handleQueryChange(e: React.ChangeEvent<HTMLInputElement>) {
     setQuery(e.target.value)
   }
