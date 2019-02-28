@@ -1,7 +1,9 @@
 import React from "react"
-import { shallow } from "enzyme"
+import { shallow, mount } from "enzyme"
 import { MockedProvider } from "react-apollo/test-utils"
+import { ApolloProvider } from "react-apollo"
 import { Repos } from "../GitQuery"
+import client from "../../index"
 import { GET_REPOS } from "../../queries/RepoQuery"
 
 const mocks = [
@@ -21,10 +23,12 @@ const mocks = [
 ]
 
 describe("The Query component ", () => {
-  const wrapper = shallow(
-    <MockedProvider mocks={mocks} addTypename={false}>
-      <Repos login="olivier" />
-    </MockedProvider>
+  const wrapper = mount(
+    <ApolloProvider client={client}>
+      <MockedProvider mocks={mocks} addTypename={false}>
+        <Repos login="olivier" />
+      </MockedProvider>
+    </ApolloProvider>
   )
   it("should render and have the proper value", () => {
     expect(wrapper.find({ login: "olivier" }))

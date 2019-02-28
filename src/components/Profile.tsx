@@ -9,7 +9,7 @@ interface profileProps {
 }
 
 const Profile: React.SFC<profileProps> = props => (
-  <div>
+  <div className="profile">
     <h2>{props.name}</h2>
     <p>
       Organizations: {props.orgs} <br />

@@ -25,6 +25,7 @@ const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 })
-
 ReactDOM.render(<App client={client} />, document.getElementById("root"))
 serviceWorker.unregister()
+
+export { client as default }
