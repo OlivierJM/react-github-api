@@ -1,0 +1,322 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profile component should match the snapshot 1`] = `
+ReactWrapper {
+  Symbol(enzyme.__unrendered__): <Profile
+    location="lsk"
+    name="olivier"
+    orgs={1}
+    totalCount={10}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "location": "lsk",
+      "name": "olivier",
+      "orgs": 1,
+      "totalCount": 10,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": <div
+        class="profile"
+      >
+        <h2>
+          olivier
+        </h2>
+        <p>
+          Organizations: 
+          1
+           
+          <br />
+          Contributions: 
+          lsk
+           
+          <br />
+          Number of Repos: 
+          10
+        </p>
+      </div>,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h2>
+            olivier
+          </h2>,
+          <p>
+            Organizations: 
+            1
+             
+            <br />
+            Contributions: 
+            lsk
+             
+            <br />
+            Number of Repos: 
+            10
+          </p>,
+        ],
+        "className": "profile",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": <h2>
+            olivier
+          </h2>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "olivier",
+          },
+          "ref": null,
+          "rendered": Array [
+            "olivier",
+          ],
+          "type": "h2",
+        },
+        Object {
+          "instance": <p>
+            Organizations: 
+            1
+             
+            <br />
+            Contributions: 
+            lsk
+             
+            <br />
+            Number of Repos: 
+            10
+          </p>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Organizations: ",
+              1,
+              " ",
+              <br />,
+              "Contributions: ",
+              "lsk",
+              " ",
+              <br />,
+              "Number of Repos: ",
+              10,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Organizations: ",
+            "1",
+            " ",
+            Object {
+              "instance": <br />,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": Array [
+                undefined,
+              ],
+              "type": "br",
+            },
+            "Contributions: ",
+            "lsk",
+            " ",
+            Object {
+              "instance": <br />,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": Array [
+                undefined,
+              ],
+              "type": "br",
+            },
+            "Number of Repos: ",
+            "10",
+          ],
+          "type": "p",
+        },
+      ],
+      "type": "div",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "location": "lsk",
+        "name": "olivier",
+        "orgs": 1,
+        "totalCount": 10,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": <div
+          class="profile"
+        >
+          <h2>
+            olivier
+          </h2>
+          <p>
+            Organizations: 
+            1
+             
+            <br />
+            Contributions: 
+            lsk
+             
+            <br />
+            Number of Repos: 
+            10
+          </p>
+        </div>,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h2>
+              olivier
+            </h2>,
+            <p>
+              Organizations: 
+              1
+               
+              <br />
+              Contributions: 
+              lsk
+               
+              <br />
+              Number of Repos: 
+              10
+            </p>,
+          ],
+          "className": "profile",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": <h2>
+              olivier
+            </h2>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "olivier",
+            },
+            "ref": null,
+            "rendered": Array [
+              "olivier",
+            ],
+            "type": "h2",
+          },
+          Object {
+            "instance": <p>
+              Organizations: 
+              1
+               
+              <br />
+              Contributions: 
+              lsk
+               
+              <br />
+              Number of Repos: 
+              10
+            </p>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Organizations: ",
+                1,
+                " ",
+                <br />,
+                "Contributions: ",
+                "lsk",
+                " ",
+                <br />,
+                "Number of Repos: ",
+                10,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Organizations: ",
+              "1",
+              " ",
+              Object {
+                "instance": <br />,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": Array [
+                  undefined,
+                ],
+                "type": "br",
+              },
+              "Contributions: ",
+              "lsk",
+              " ",
+              Object {
+                "instance": <br />,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": Array [
+                  undefined,
+                ],
+                "type": "br",
+              },
+              "Number of Repos: ",
+              "10",
+            ],
+            "type": "p",
+          },
+        ],
+        "type": "div",
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
