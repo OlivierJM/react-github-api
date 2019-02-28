@@ -1,11 +1,13 @@
 import React, { Fragment } from "react"
 import { useQuery } from "react-apollo-hooks"
 import { GET_REPOS } from "../queries/RepoQuery"
-import PlaceHolder from "./PlaceHolder"
+import PlaceHolder from "./PlaceHolder.tsx"
 import Profile from "./Profile"
 
 export function Repos({ login }) {
-  const { data, error } = useQuery(GET_REPOS, { variables: { login } })
+  const { data, error } = useQuery(GET_REPOS, {
+    variables: { login },
+  })
   if (error) return <PlaceHolder />
   console.log(data)
   return (

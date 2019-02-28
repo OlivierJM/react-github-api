@@ -1,7 +1,7 @@
 import React, { Suspense } from "react"
 import { ApolloProvider } from "react-apollo"
 import { ApolloProvider as ApolloProviderHooked } from "react-apollo-hooks"
-import FallBackUI from "./components/FallbackUI"
+import FallBackUI from "./components/FallbackUI.tsx"
 
 const Repos = React.lazy(() => import("./components/Repositories"))
 
