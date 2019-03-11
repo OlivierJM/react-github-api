@@ -1,4 +1,5 @@
 import * as React from "react"
+import "./styles/fallbackui.css"
 
 // this can be made better
 function FallBackUI() {

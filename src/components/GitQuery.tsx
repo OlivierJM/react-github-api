@@ -3,6 +3,7 @@ import { useQuery } from "react-apollo-hooks"
 import { GET_REPOS } from "../queries/RepoQuery"
 import PlaceHolder from "./PlaceHolder"
 import Profile from "./Profile"
+import "./styles/gitquery.css"
 
 interface repoProps {
   login: string

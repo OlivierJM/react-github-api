@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from "react"
 import { Repos } from "./GitQuery"
 import { useDebounce } from "../utils/hooks"
+import "./styles/repositories.css"
 
 function Repositories() {
   const [query, setQuery] = useState("")
