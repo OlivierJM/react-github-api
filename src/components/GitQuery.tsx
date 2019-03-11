@@ -45,22 +45,22 @@ const Repos: React.SFC<repoProps> = ({ login }) => {
           }
         />
       </div>
-      <div className="row">
+      <div className="container">
         {data.user.repositories.nodes.map((repo: repo, i: number) => (
-          <div className="sm-12 md-4 col" key={i}>
-            <div className="card">
-              <div className="card-body">
-                <h4 className="card-title">{repo.name}</h4>
-                <h5 className="card-subtitle">
+          <div className="item" key={i}>
+            <div className="">
+              <div className="">
+                <h4 className="">{repo.name}</h4>
+                <h5 className="">
                   <span role="img" aria-label="stars">
                     ⭐
                   </span>{" "}
                   {repo.stargazers.totalCount}
                 </h5>
-                <h5 className="card-subtitle">{repo.isFork && "Forked"}</h5>
-                <p className="card-text">{repo.description}</p>
+                <h5 className="">{repo.isFork && "Forked"}</h5>
+                <p className="">{repo.description}</p>
                 <a
-                  className="card-link"
+                  className=""
                   target="_blank"
                   rel="noopener noreferrer"
                   href={repo.url}

@@ -11,11 +11,8 @@ function Repositories() {
   }
   return (
     <Fragment>
-      <div
-        className="row flex-center"
-        style={{ marginTop: query.length ? 0 : "10%" }}
-      >
-        <div className="form-group">
+      <div className="" style={{ marginTop: query.length ? 0 : "10%" }}>
+        <div className="">
           <input
             maxLength={39}
             onChange={handleQueryChange}
@@ -26,7 +23,7 @@ function Repositories() {
           />
         </div>
       </div>
-      <div className="row">
+      <div className="">
         <Repos login={debouncedQuery} />
       </div>
     </Fragment>

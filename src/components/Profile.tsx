@@ -16,7 +16,6 @@ const Profile: React.SFC<profileProps> = props => (
       Contributions: {props.location} <br />
       Number of Repos: {props.totalCount}
     </p>
-    {/* <img src={props.image} alt="github avatar" /> */}
   </div>
 )
 

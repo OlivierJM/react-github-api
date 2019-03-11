@@ -1,0 +1,16 @@
+.placeholder {
+  display: grid;
+}
+
+.links {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 4 0px;
+}
+.link {
+}
+
+.repo-title {
+  justify-self: center;
+  align-self: center;
+}
