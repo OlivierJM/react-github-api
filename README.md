@@ -58,9 +58,6 @@ Before pushing anything to your fork, always
 
 `git pull upstream`
 
-> Make sure your commit messages should be clear not vague e.g "Changes and Updates made"  
-> Work from a branch other than master whenever possible and branch name should be clear  
-> Write clean and transparent code which is easy to maintain  
-> When making PRs, give clear descriptions of the changes you made.
+For more on this read the contributing guide.
 
 ## Happy Coding
